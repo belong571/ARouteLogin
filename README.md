@@ -1,8 +1,8 @@
-#效果图
+# 效果图
 ![](http://upload-images.jianshu.io/upload_images/6722970-a84d3a33f18b7c57.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50)
 
-#使用方法
-##1.gradle配置
+# 使用方法
+## 1.gradle配置
 ```
 android {
     defaultConfig {
@@ -21,7 +21,7 @@ dependencies {
       annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
 }
 ```
-##2.Application初始化sdk
+## 2.Application初始化sdk
 ```
  if (BuildConfig.DEBUG) {
     // 这两行必须写在init之前，否则这些配置在init过程中将无效
@@ -30,7 +30,7 @@ dependencies {
  }
  ARouter.init(this);// 尽可能早，推荐在Application中初始化
 ```
-##3.添加注解
+## 3.添加注解
 ```
 public class BaseActivity extends AppCompatActivity {
 
@@ -58,7 +58,7 @@ public class FirstActivity extends BaseActivity {
     }
 }
 ```
-##4.拦截器的使用面向切面编程
+## 4.拦截器的使用面向切面编程
 ```
 // 在跳转过程中处理登陆事件，这样就不需要在目标页重复做登陆检查
 // 拦截器会在跳转之间执行，多个拦截器会按优先级顺序依次执行  
